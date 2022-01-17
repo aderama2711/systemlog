@@ -65,7 +65,7 @@ int main(){
 	if( !outdata){
 		cerr << "Error FILE" << endl;
 	}
-	outdata << "Time,CPU used, RAM used, VRAM used" << endl;
+	outdata << "Time,CPU used, RAM used, VRAM used" << std::endl;
 	while (true){
 		//VirtualMem
 		sysinfo (&memInfo);
@@ -92,7 +92,7 @@ int main(){
 		
 	    auto now = std::chrono::system_clock::now();
 	    std::time_t now_time = std::chrono::system_clock::to_time_t(now);
-	    outdata << std::ctime(&now_time) << "," << std::to_string(cpuused) "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << endl;
+	    outdata << std::ctime(&now_time) << "," << std::to_string(cpuused) "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
 	    
 	    sleep(1);
 	}
