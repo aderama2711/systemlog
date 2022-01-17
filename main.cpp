@@ -14,6 +14,7 @@ using std::ofstream;
 #include <unistd.h>
 
 struct sysinfo memInfo;
+static unsigned long long lastTotalUser, lastTotalUserLow, lastTotalSys, lastTotalIdle;
 
 void init(){
     FILE* file = fopen("/proc/stat", "r");
@@ -85,8 +86,6 @@ int main(){
 		long long physMemUsed = memInfo.totalram - memInfo.freeram;
 		//Multiply in next statement to avoid int overflow on right hand side...
 		physMemUsed *= memInfo.mem_unit;
-		
-		static unsigned long long lastTotalUser, lastTotalUserLow, lastTotalSys, lastTotalIdle;
 		
 		double cpuused = getCurrentValue();
 	
