@@ -88,8 +88,9 @@ int main(){
 		physMemUsed *= memInfo.mem_unit;
 		
 		double cpuused = getCurrentValue();
-	
 		
+		cout << cpuused;
+	
 	    auto now = std::chrono::system_clock::now();
 	    std::time_t now_time = std::chrono::system_clock::to_time_t(now);
 	    outdata << std::ctime(&now_time) << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
