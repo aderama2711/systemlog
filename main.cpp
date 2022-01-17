@@ -87,8 +87,6 @@ int main(){
 		physMemUsed *= memInfo.mem_unit;
 		
 		double cpuused = getCurrentValue();
-		
-		std::cout << cpuused;
 	
 	    time_t now = time(0);
 	    char* dt = ctime(&now);
