@@ -89,7 +89,7 @@ int main(){
 	
 		
 	    auto now = std::chrono::system_clock::now();
-	    outdata << to_string(std::ctime(&now)) << "," << to_string(cpuused) "," << to_string(physMemUsed) << "," << to_string(virtualMemUsed) << endl;
+	    outdata << std::to_string(std::ctime(&now)) << "," << std::to_string(cpuused) "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << endl;
 	    
 	    sleep(1);
 	}
