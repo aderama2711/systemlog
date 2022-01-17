@@ -62,7 +62,7 @@ int main(){
 		cerr << "Error FILE" << endl;
 	}
 	outdata << "Time,CPU used, RAM used, VRAM used" << endl;
-	while true{
+	while (true){
 		//VirtualMem
 		sysinfo (&memInfo);
 		long long totalVirtualMem = memInfo.totalram;
