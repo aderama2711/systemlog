@@ -25,8 +25,6 @@ void init(){
 
 double getCurrentValue(){
 	
-	init();
-	
     double percent;
     FILE* file;
     unsigned long long totalUser, totalUserLow, totalSys, totalIdle, total;
@@ -60,6 +58,7 @@ double getCurrentValue(){
 
 
 int main(){
+	init();
 	ofstream outdata;
 	outdata.open("system.csv");
 	if( !outdata){
