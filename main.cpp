@@ -89,8 +89,8 @@ int main(){
 		double cpuused = getCurrentValue();
 	
 	    time_t now = time(0);
-	    char* dt = ctime(&now);
-	    outdata << dt << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
+	    tm *ltm = localtime(&now);
+	    outdata << 5+ltm->tm_hour << ":" << 30+ltm->tm_min << ":" << ltm->tm_sec << endl; << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
 	    
 	    sleep(1);
 	}
