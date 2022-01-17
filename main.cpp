@@ -90,7 +90,7 @@ int main(){
 	
 	    time_t now = time(0);
 	    tm *ltm = localtime(&now);
-	    outdata << 5+ltm->tm_hour << ":" << 30+ltm->tm_min << ":" << ltm->tm_sec << endl; << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
+	    outdata << 5+ltm->tm_hour << ":" << 30+ltm->tm_min << ":" << ltm->tm_sec << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
 	    
 	    sleep(1);
 	}
