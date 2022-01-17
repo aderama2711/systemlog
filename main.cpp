@@ -90,7 +90,7 @@ int main(){
 		
 		std::cout << cpuused;
 	
-	    time_t now = time(0)
+	    time_t now = time(0);
 	    char* dt = ctime(&now);
 	    outdata << dt << "," << std::to_string(cpuused) << "," << std::to_string(physMemUsed) << "," << std::to_string(virtualMemUsed) << std::endl;
 	    
