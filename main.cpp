@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
+using std::cerr;
+using std::endl;
+#include <fstream>
+using std::ofstream;
+#include <cstdlib>
 #include <chrono>
 #include <ctime>
 #include <unistd.h>
